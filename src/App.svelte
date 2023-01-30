@@ -1,45 +1,63 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+    import etoile from '/etoile.png?url'
+    import Anilist from "./lib/anilist.svelte"
+    import Gif from "./lib/gif.svelte"
+    import Card from "./lib/card.svelte"
+    import FloppEgg from "./lib/floppEgg.svelte";
 </script>
+<div class="zizizicaciac">
+<main style="background-image: url({etoile})">
+    <Card >
+        <h1>TG T2006</h1>
+        <p>Ferme ta guele</p>
+    </Card>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
+    <Card title="LISTE DU PUANT">
+        <Anilist userId={parseInt(import.meta.env.VITE_ANILIST_ID)} defaultFetchCount={1} perPage={20}/>
+    </Card>
 
-  <div class="card">
-    <Counter />
-  </div>
+    <Card title="BIBMO">
+        <Gif />
+    </Card>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+    <FloppEgg />
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
+    .zizizicaciac {
+        min-height: 100vh;
+        transition: all 800ms ;
+        transform: skew(0deg, 0deg);
+    }
+
+    .zizizicaciac:hover {
+        transform: skew(0deg, 0deg);
+    }
+
+    main {
+        min-height: 100vh;
+        background-color: #6262ff;
+        background-repeat: repeat;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem 1rem;
+        transition: all 800ms;
+        transform: scale(1.0) ;
+
+    }
+
+    main:hover {
+        transform: scale(1.05) ;
+
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+
+
 </style>

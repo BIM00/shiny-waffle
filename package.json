@@ -12,5 +12,10 @@
     "@sveltejs/vite-plugin-svelte": "^2.0.0",
     "svelte": "^3.54.0",
     "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
+    "javascript-time-ago": "^2.5.9"
   }
 }
