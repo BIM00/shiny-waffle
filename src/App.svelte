@@ -5,8 +5,15 @@
     import Card from "./lib/card.svelte"
     import FloppEgg from "./lib/floppEgg.svelte";
 </script>
-<div class="zizizicaciac">
-<main style="background-image: url({etoile})">
+
+<main >
+    <div class="zizizicaciac" style="background-image: url({etoile})" >
+
+    </div>
+    <div class="eEASTERegg">
+        <p>SI TUV AEU AVOIRT L4ESTEREAGG FLOPPPA TUPEUX FAIRE LE CONANMIR CODE SUR LA PGAE</p>
+        <p>QSIT TU SAIS PAU4 CEQUE SIATU : HATU HATU BNAS BAS GAUDRCHE GAUDGHR DROITREE DROTIE BA</p>
+    </div>
     <Card >
         <h1>TG T2006</h1>
         <p>Ferme ta guele</p>
@@ -23,39 +30,53 @@
     <FloppEgg />
 </main>
 
+
 <style>
     .zizizicaciac {
-        min-height: 100vh;
-        transition: all 800ms ;
-        transform: skew(0deg, 0deg);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-color: #6262ff;
+        background-repeat: repeat;
+        transition: transform 800ms;
+        transform: scale(1.0) ;
+        z-index: 0;
     }
 
     .zizizicaciac:hover {
-        transform: skew(0deg, 0deg);
+
+        transform: scale(1.05) ;
+
+
     }
 
     main {
         min-height: 100vh;
-        background-color: #6262ff;
-        background-repeat: repeat;
+        position: relative;
         display: flex;
         justify-content: center;
         flex-direction: column;
         gap: 2rem;
         align-items: center;
         padding: 2rem 1rem;
-        transition: all 800ms;
-        transform: scale(1.0) ;
 
+        overflow-x: hidden;
+        z-index: 2;
     }
 
-    main:hover {
-        transform: scale(1.05) ;
 
-    }
+
+
 
     h1 {
         font-size: 4rem;
+    }
+
+    .eEASTERegg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
 

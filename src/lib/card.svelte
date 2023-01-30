@@ -21,13 +21,13 @@
         background-color: aquamarine;
         transition: all 400ms;
         transform: scale(1.0);
-        z-index: 1;
+        z-index: 3;
         border :1px solid black;
         max-width: 80vw;
     }
 
     .card:hover {
         transform: scale(1.1) var(--transpeople);
-        z-index: 2;
+        z-index: 4;
     }
 </style>
